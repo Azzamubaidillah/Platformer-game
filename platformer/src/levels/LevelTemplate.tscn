@@ -55,4 +55,4 @@ position = Vector2( 512, 590 )
 script = ExtResource( 3 )
 
 [node name="enemy" parent="TileMap" instance=ExtResource( 4 )]
-position = Vector2( 1176, 544 )
+position = Vector2( 712, 504 )
