@@ -10,7 +10,7 @@ extents = Vector2( 32, 31 )
 extents = Vector2( 34, 33 )
 
 [node name="player" type="KinematicBody2D"]
-position = Vector2( 223, 233 )
+position = Vector2( 16, 28 )
 collision_mask = 8
 script = ExtResource( 2 )
 speed = Vector2( 800, 1400 )
@@ -27,6 +27,14 @@ shape = SubResource( 1 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( -16, -264 )
 current = true
+limit_left = 0
+limit_top = 0
+limit_smoothed = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+drag_margin_left = 0.0
+drag_margin_right = 0.0
 
 [node name="EnemyDetector" type="Area2D" parent="."]
 monitorable = false
