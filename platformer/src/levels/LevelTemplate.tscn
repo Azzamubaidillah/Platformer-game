@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://asset/tileset.png" type="Texture" id=1]
 [ext_resource path="res://src/actors/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://asset/background.png" type="Texture" id=3]
+[ext_resource path="res://src/levels/level2.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/objects/Coin.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/objects/Portal2D.tscn" type="PackedScene" id=6]
 
@@ -77,4 +78,5 @@ position = Vector2( 504, 529 )
 position = Vector2( 381, 529 )
 
 [node name="Portal2D" parent="." instance=ExtResource( 6 )]
-position = Vector2( 1048, 306 )
+position = Vector2( 991, 353 )
+next_scene = ExtResource( 4 )
