@@ -1,4 +1,5 @@
 extends actor
+
 export var stomp_impulse: = 1000.0
 
 func _on_EnemyDetector_area_entered(area):
