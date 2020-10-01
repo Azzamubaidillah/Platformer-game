@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://asset/tileset.png" type="Texture" id=1]
+[ext_resource path="res://src/actors/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://asset/background.png" type="Texture" id=3]
+[ext_resource path="res://src/objects/Coin.tscn" type="PackedScene" id=5]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "tileset.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( -2, -6, 39, 54 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [  ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 80, 80 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="LevelTemplate" type="Node2D"]
+position = Vector2( 15, -23 )
+
+[node name="background" type="TextureRect" parent="."]
+margin_right = 1920.0
+margin_bottom = 1080.0
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( 300, 0 )
+tile_set = SubResource( 2 )
+cell_size = Vector2( 80, 80 )
+cell_quadrant_size = 8
+cell_custom_transform = Transform2D( 32, 0, 0, 32, 0, 0 )
+collision_layer = 8
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 65532, 0, 0, 22, 0, 0, 131068, 0, 0, 65558, 0, 0, 196604, 0, 0, 131094, 0, 0, 262140, 0, 0, 196630, 0, 0, 327676, 0, 0, 262166, 0, 0, 393212, 0, 0, 327690, 0, 0, 327702, 0, 0, 458748, 0, 0, 393216, 0, 0, 393224, 0, 0, 393238, 0, 0, 524284, 0, 0, 458774, 0, 0, 589820, 0, 0, 589822, 0, 0, 524294, 0, 0, 524310, 0, 0, 655356, 0, 0, 655357, 0, 0, 655358, 0, 0, 655359, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0, 589840, 0, 0, 589841, 0, 0, 589842, 0, 0, 589843, 0, 0, 589844, 0, 0, 589845, 0, 0, 589846, 0, 0 )
+
+[node name="player" parent="TileMap" instance=ExtResource( 2 )]
+position = Vector2( 165, 712 )
+gravity = 4000.0
+
+[node name="Coin" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 533, 448 )
+
+[node name="Coin2" parent="TileMap" instance=ExtResource( 5 )]
+position = Vector2( 707, 372 )
