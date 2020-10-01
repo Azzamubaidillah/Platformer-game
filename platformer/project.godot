@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "KinematicBody2D",
 "class": "actor",
 "language": "GDScript",
-"path": "res://src/actors/actor.gd"
+"path": "res://src/Actors/actor.gd"
 } ]
 _global_script_class_icons={
 "actor": ""
@@ -21,6 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="platformer"
+run/main_scene="res://src/Screens/mainscreen.tscn"
 config/icon="res://icon.png"
 
 [display]
