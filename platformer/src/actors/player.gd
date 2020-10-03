@@ -6,7 +6,7 @@ func _on_EnemyDetector_area_entered(area):
 	_velocity = calculate_stomp_velocity(_velocity, stomp_impulse)
 
 func _on_EnemyDetector_body_entered(body):
-	queue_free()
+	die()
 
 
 func _physics_process(delta: float) -> void:
@@ -41,5 +41,7 @@ func calculate_stomp_velocity(linear_velocity: Vector2, impulse: float) -> Vecto
 		out.y = -impulse
 		return out 
 
-
+func die() -> void:
+	PlayerData.deaths += 1
+	queue_free()
 

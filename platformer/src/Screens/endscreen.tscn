@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://asset/background.png" type="Texture" id=1]
-[ext_resource path="res://src/UserInterface/Title.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/UserInterface/ChangeSceneButton.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/UserInterface/QuitButton.tscn" type="PackedScene" id=4]
 [ext_resource path="res://asset/new_theme.tres" type="Theme" id=5]
@@ -10,10 +9,15 @@
 anchor_right = 1.0
 anchor_bottom = 1.0
 theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="background" type="TextureRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 2.37842
+margin_right = 2.37842
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 2
@@ -21,22 +25,52 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Title" parent="." instance=ExtResource( 2 )]
-
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -119.0
-margin_top = -90.0
-margin_right = 120.0
-margin_bottom = 51.0
+margin_left = -119.5
+margin_top = -70.5
+margin_right = 119.5
+margin_bottom = 70.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PlayButton" parent="Menu" instance=ExtResource( 3 )]
+text = "Play again"
 next_scene_path = "res://src/Levels/LevelTemplate.tscn"
 
 [node name="QuitButton" parent="Menu" instance=ExtResource( 4 )]
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.5
+margin_top = -160.583
+margin_right = 240.5
+margin_bottom = -129.583
+text = "Congratulations, you finish the game"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -240.5
+margin_top = 119.719
+margin_right = 240.5
+margin_bottom = 184.719
+text = "Your final score %5
+You died times %5"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
