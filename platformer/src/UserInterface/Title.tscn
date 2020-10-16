@@ -1,19 +1,13 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://asset/font_title.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/ui_theme.tres" type="Theme" id=1]
+[ext_resource path="res://assets/font_title.tres" type="DynamicFont" id=2]
 
 [node name="Title" type="Label"]
-anchor_left = 0.5
-anchor_top = 0.244
-anchor_right = 0.5
-anchor_bottom = 0.244
-margin_left = -99.1274
-margin_top = -23.6056
-margin_right = 118.873
-margin_bottom = 24.3944
-custom_fonts/font = ExtResource( 1 )
-text = "Mario bros"
+anchor_right = 1.0
+margin_bottom = 353.0
+theme = ExtResource( 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "Game Title"
 align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
+valign = 1
